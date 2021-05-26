@@ -14,6 +14,7 @@
 		A22CEBB9265DE0B300B3CC8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A22CEBB8265DE0B300B3CC8F /* Assets.xcassets */; };
 		A22CEBBC265DE0B300B3CC8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22CEBBA265DE0B300B3CC8F /* LaunchScreen.storyboard */; };
 		A22CEBBF265DE0B300B3CC8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A22CEBBE265DE0B300B3CC8F /* main.m */; };
+		A22CEBC9265DEEE800B3CC8F /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = A22CEBC8265DEEE800B3CC8F /* Tools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		A22CEBBB265DE0B300B3CC8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A22CEBBD265DE0B300B3CC8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A22CEBBE265DE0B300B3CC8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A22CEBC7265DEEE800B3CC8F /* Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		A22CEBC8265DEEE800B3CC8F /* Tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				A22CEBB0265DE0B100B3CC8F /* SceneDelegate.m */,
 				A22CEBB2265DE0B100B3CC8F /* ViewController.h */,
 				A22CEBB3265DE0B100B3CC8F /* ViewController.m */,
+				A22CEBC7265DEEE800B3CC8F /* Tools.h */,
+				A22CEBC8265DEEE800B3CC8F /* Tools.m */,
 				A22CEBB5265DE0B100B3CC8F /* Main.storyboard */,
 				A22CEBB8265DE0B300B3CC8F /* Assets.xcassets */,
 				A22CEBBA265DE0B300B3CC8F /* LaunchScreen.storyboard */,
@@ -146,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A22CEBB4265DE0B100B3CC8F /* ViewController.m in Sources */,
+				A22CEBC9265DEEE800B3CC8F /* Tools.m in Sources */,
 				A22CEBAE265DE0B100B3CC8F /* AppDelegate.m in Sources */,
 				A22CEBBF265DE0B300B3CC8F /* main.m in Sources */,
 				A22CEBB1265DE0B100B3CC8F /* SceneDelegate.m in Sources */,
@@ -294,6 +300,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77MMW6NR5H;
 				INFOPLIST_FILE = LittleTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +319,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77MMW6NR5H;
 				INFOPLIST_FILE = LittleTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

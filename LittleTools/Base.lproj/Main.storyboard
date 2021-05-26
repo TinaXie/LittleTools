@@ -1,24 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RcC-iG-MKh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--小工具-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udp-Uo-UMZ">
+                                <rect key="frame" x="30" y="206" width="141" height="48"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="kDD-I9-GLw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="缓存通讯录">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveContact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WOj-R9-xo1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGc-Xa-SQ9">
+                                <rect key="frame" x="128.5" y="292" width="157" height="60"/>
+                                <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="vHB-7N-3fR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <state key="normal" title="恢复通讯录">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetContact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pcP-3D-ATH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIZ-lC-6gD">
+                                <rect key="frame" x="243" y="206" width="141" height="48"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="清空通讯录">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearContact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nok-4d-esO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USx-si-9rj">
+                                <rect key="frame" x="105" y="380" width="204" height="60"/>
+                                <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Iuo-H7-X3N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <state key="normal" title="打印缓存通讯录">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="logAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fol-8O-I1s"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7G-eP-lOA">
+                                <rect key="frame" x="30" y="116" width="354" height="60"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bIJ-Xr-n78"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mIZ-lC-6gD" firstAttribute="top" secondItem="Udp-Uo-UMZ" secondAttribute="top" id="1w1-c0-32P"/>
+                            <constraint firstItem="USx-si-9rj" firstAttribute="centerX" secondItem="dGc-Xa-SQ9" secondAttribute="centerX" id="6dZ-DZ-61m"/>
+                            <constraint firstItem="c7G-eP-lOA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="FTO-zf-axS"/>
+                            <constraint firstItem="USx-si-9rj" firstAttribute="top" secondItem="dGc-Xa-SQ9" secondAttribute="bottom" constant="28" id="NVs-a5-Pba"/>
+                            <constraint firstItem="mIZ-lC-6gD" firstAttribute="height" secondItem="Udp-Uo-UMZ" secondAttribute="height" id="Y8f-hR-hYV"/>
+                            <constraint firstItem="mIZ-lC-6gD" firstAttribute="leading" secondItem="Udp-Uo-UMZ" secondAttribute="trailing" constant="72" id="ZFE-cb-Und"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mIZ-lC-6gD" secondAttribute="trailing" constant="30" id="c3D-hz-rkD"/>
+                            <constraint firstItem="dGc-Xa-SQ9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cJ2-25-2Vu"/>
+                            <constraint firstItem="c7G-eP-lOA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="e9t-PE-WnK"/>
+                            <constraint firstItem="mIZ-lC-6gD" firstAttribute="width" secondItem="Udp-Uo-UMZ" secondAttribute="width" id="elP-bD-4UW"/>
+                            <constraint firstItem="dGc-Xa-SQ9" firstAttribute="top" secondItem="Udp-Uo-UMZ" secondAttribute="bottom" constant="38" id="j24-Qz-1b8"/>
+                            <constraint firstItem="Udp-Uo-UMZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="kIF-O1-676"/>
+                            <constraint firstItem="Udp-Uo-UMZ" firstAttribute="top" secondItem="c7G-eP-lOA" secondAttribute="bottom" constant="30" id="nm9-cN-vxD"/>
+                            <constraint firstItem="c7G-eP-lOA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yVc-6f-oqc"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="小工具" id="9vc-uA-aHu"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="c7G-eP-lOA" id="ZrT-gv-Jlp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="88.392857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nca-xV-nfQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RcC-iG-MKh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y4A-13-ilo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="q70-cK-zxx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdy-oK-in5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="quaternaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
